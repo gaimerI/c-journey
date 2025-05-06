@@ -2,6 +2,6 @@
 
 int main() {
   printf("Hello, World!");
-  printf("I'm trying to leatn C.");
+  printf("I'm trying to learn C.");
   printf("I seem to like it.");
 }
