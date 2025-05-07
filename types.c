@@ -9,6 +9,7 @@ int main() {
   char e[] = "Hello, World!"; // Strings are arrays of chars
   bool f = true; // Booleans are not built in, they require stdbool.h
   int g[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}; // Array, all of same type
+  int* h = &a; // pointer of variable a 
   
   printf("Integer: %d\n", a);
   printf("Float: %f\n", b);
@@ -16,6 +17,6 @@ int main() {
   printf("Char: %c\n", d);
   printf("String: %s\n", e);
   printf("Bool: %d\n", f); // Booleans are processed as 0 or 1
-  printf("Array memory address: %d\n", g); // could also be called via %p
+  printf("Memory address of Integer: %p\n", h); // is called via %p
   printf("Array item: %d\n", g[0]); // Array items are called with an index
 }
