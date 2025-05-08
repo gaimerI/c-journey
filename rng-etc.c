@@ -24,12 +24,17 @@ Vec2 vec2_add(Vec2 a, Vec2 b);
 Vec2 vec2_sub(Vec2 a, Vec2 b);
 double vec2_length(Vec2 v);
 Vec2 vec2_normalize(Vec2 v);
+Vec2 vec2_scale(Vec2 v, double s);
+double vec2_dot(Vec2 a, Vec2 b);
+Vec2 vec2_perpendicular(Vec2 v)
 void rng_seed(unsigned short seed);
 int rng_bool();
+Vec2 vec2_lerp(Vec2 a, Vec2 b, double t)
 unsigned short rng_range(unsigned short min, unsigned short max);
 double square_root(double number);
 double clamp(double val, double min, double max);
 double lerp(double a, double b, double t);
+int is_inside_circle_bool(Vec2 circle, double radius, Vec2 point);
 
 /*
 GLOBAL CONSTANTS
@@ -136,6 +141,14 @@ Vec2 vec2_lerp(Vec2 a, Vec2 b, double t) {
 
 Vec2 vec2_perpendicular(Vec2 v) {
     return (Vec2){-v.y, v.x};
+}
+
+int is_inside_circle_bool(Vec2 circle, double radius, Vec2 point) {
+  if (((point.x - circle.x) * (point.x - circle.x)) + ((point.y - circle.y) * (point.y - circle.y)) <= (radius * radius)) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 /*
